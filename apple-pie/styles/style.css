@@ -68,10 +68,16 @@ hr {
 .ingredients ul{
   padding: 10px 0px 20px 30px;
   text-align: left;
+  
 }
-
+.ingredients li{
+  padding-bottom: 5px;
+}
 .directions ol{
   padding: 10px 0px 20px 30px;
+}
+.directions li{
+  padding: 5px;
 }
 
 .directions h2{
