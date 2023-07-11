@@ -41,6 +41,8 @@ body {
   text-align: center;
   margin: 0 100px;
 }
+
+
 .directions {
   margin: 0 100px;
 }
@@ -59,28 +61,54 @@ body {
 hr {
   margin: 0 100px;
 }
-.ingredients h2{
+.ingredients h2 {
   margin-top: 20px;
   margin-bottom: 10px;
   text-align: left;
 }
 
-.ingredients ul{
+.ingredients ul {
   padding: 10px 0px 20px 30px;
   text-align: left;
-  
 }
-.ingredients li{
+.ingredients li {
   padding-bottom: 5px;
 }
-.directions ol{
+.directions ol {
   padding: 10px 0px 20px 30px;
 }
-.directions li{
+.directions li {
   padding: 5px;
 }
 
-.directions h2{
+.directions h2 {
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+ol {
+  /* 1. Remove the default list style */  
+  list-style: none;
+}
+
+ol > li {
+  /* 2. Create a custom list counter */  
+  counter-increment: listcounter;
+}
+
+ol > li::before {
+  /*3. Set the new style for the list markers */
+  content: counter(listcounter) ")";
+}
+
+ul {
+  /* 1. Remove the default list style */  
+  list-style: none;
+}
+
+ul > li::before {
+  /*3. Set the new style for the list markers */
+  content: "-";
+  display: inline-block;
+  
 }
